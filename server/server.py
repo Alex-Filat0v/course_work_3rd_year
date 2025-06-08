@@ -13,4 +13,4 @@ app.include_router(ws_router)
 
 
 if __name__ == '__main__':
-    uvicorn.run('server:app', reload=True)
+    uvicorn.run('server:app', port=8000, reload=True)

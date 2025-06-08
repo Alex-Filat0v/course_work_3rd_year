@@ -10,6 +10,7 @@ connected_clients: List[WebSocket] = []
 async def websocket_endpoint(websocket: WebSocket, username: str) -> None:
     await websocket.accept()
     connected_clients.append(websocket)
+    print(websocket)
     try:
         while True:
             data = await websocket.receive_text()

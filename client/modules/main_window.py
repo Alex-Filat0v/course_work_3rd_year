@@ -9,7 +9,11 @@ from PyQt6 import uic, QtWidgets, QtCore, QtGui
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("Группы.ui", self)
+
+        current_dir = os.path.dirname(__file__)
+        file_dir = os.path.join(current_dir, "../templates/main.ui")
+        uic.loadUi(file_dir, self)
+
         self.pushButton_send_message.clicked.connect(self.send_message)
         self.lineEdit_message.returnPressed.connect(self.send_message)
         self.nick = "You"
@@ -20,7 +24,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # Используем аватарку пользователя
         size = QtCore.QSize(45, 45)
-        icon = QtGui.QIcon("user.png")
+        icon = QtGui.QIcon("../user_data/user.png")
         self.listWidget.setIconSize(size)
         item.setIcon(icon)
 
@@ -36,7 +40,7 @@ class MainWindow(QtWidgets.QMainWindow):
             item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
 
             size = QtCore.QSize(45, 45)
-            icon = QtGui.QIcon("avatar.png")
+            icon = QtGui.QIcon("../user_data/avatar.png")
             self.listWidget.setIconSize(size)
             item.setIcon(icon)
 
@@ -69,7 +73,7 @@ class MainWindow(QtWidgets.QMainWindow):
             item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
 
             size = QtCore.QSize(45, 45)
-            icon = QtGui.QIcon("user.png")
+            icon = QtGui.QIcon("../user_data/user.png")
             self.listWidget.setIconSize(size)
             item.setIcon(icon)
 

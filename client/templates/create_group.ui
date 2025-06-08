@@ -6,35 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1647</width>
-    <height>943</height>
+    <width>800</width>
+    <height>820</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(67, 0, 203);</string>
+   <string notr="true">background-color: rgb(64, 0, 194);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit_task_description">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>490</y>
-      <width>351</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>110</y>
+      <x>50</x>
+      <y>20</y>
       <width>511</width>
       <height>101</height>
      </rect>
@@ -48,15 +40,15 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Создание задачи</string>
+     <string>Создание рабочей группы</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>310</y>
-      <width>181</width>
+      <x>50</x>
+      <y>180</y>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -69,14 +61,14 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Название задачи</string>
+     <string>Название:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_task_name">
+   <widget class="QLineEdit" name="lineEdit_title">
     <property name="geometry">
      <rect>
-      <x>790</x>
-      <y>370</y>
+      <x>50</x>
+      <y>230</y>
       <width>351</width>
       <height>41</height>
      </rect>
@@ -88,9 +80,9 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>440</y>
-      <width>181</width>
+      <x>50</x>
+      <y>320</y>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -103,14 +95,27 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Описание задачи</string>
+     <string>Описание:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_add_task">
+   <widget class="QLineEdit" name="lineEdit_description">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>750</y>
+      <x>50</x>
+      <y>370</y>
+      <width>351</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_add_group">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>620</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -121,25 +126,24 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+     <string notr="true">background-color: rgb(85, 255, 250);</string>
     </property>
     <property name="text">
-     <string>Добавить задачу</string>
+     <string>Добавить группу</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_error">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>210</y>
-      <width>331</width>
-      <height>51</height>
+      <x>50</x>
+      <y>140</y>
+      <width>371</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -155,8 +159,8 @@ background-color: rgb(0, 0, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1647</width>
-     <height>26</height>
+     <width>800</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

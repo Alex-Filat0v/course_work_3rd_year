@@ -22,6 +22,7 @@ async def send_messages(ws) -> None:
 
 async def main() -> None:
     async with httpx.AsyncClient() as client:
+        '''
         password = "123"
         password = sha256(password.encode('utf-8')).hexdigest()
         auth = {
@@ -40,10 +41,9 @@ async def main() -> None:
             print(resp.text)
         else:
             print("COOL!")
+        '''
 
-
-
-        username = str(input('Введите логин(yu):'))
+        username = str(input('Введите логин(alex):'))
         password = str(input('Введите пароль(123):'))
         password = sha256(password.encode('utf-8')).hexdigest()
         auth = {

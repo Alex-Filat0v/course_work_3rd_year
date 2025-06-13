@@ -23,7 +23,7 @@ class CreateGroupWindow(QtWidgets.QMainWindow):
                 border-radius: 5px;
             }
             QCheckBox { 
-                color: black; /* Цвет текста для чекбоксов */
+                color: black;
             }
         """)
 

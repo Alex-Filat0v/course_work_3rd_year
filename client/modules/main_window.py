@@ -52,7 +52,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.receiver = MessageReceiver()
         self.receiver.message_received.connect(self.display_incoming_message)
 
-        # Стили для виджета сообщений
         self.listWidget.setStyleSheet("""
             QListWidget {
                 border: 1px solid #353535;
@@ -202,13 +201,12 @@ class MainWindow(QtWidgets.QMainWindow):
             print(f"Получено некорректное JSON-сообщение: {message_json}")
 
     def add_message_to_widget(self, msg_data):
-        """Создает и добавляет кастомный виджет сообщения в чат."""
         message_id = msg_data.get('_id', 'system_msg')
         author = msg_data.get('author_username', 'System')
         text = msg_data.get('text', '')
         try:
             timestamp_dt = datetime.fromisoformat(msg_data['created_at'])
-            time_str = timestamp_dt.strftime("%H:%M")
+            time_str = timestamp_dt.strftime("%d.%m.%y %H:%M")
         except (ValueError, TypeError, KeyError):
             time_str = ""
         chat_info = self.chats.get(self.current_chat_id, {})
@@ -219,9 +217,9 @@ class MainWindow(QtWidgets.QMainWindow):
         list_item.setSizeHint(message_item_widget.sizeHint())
 
         if author == self.nick:
-            message_item_widget.setStyleSheet("background-color: #dcf8c6; border-radius: 5px;")
+            message_item_widget.setStyleSheet("background-color: #d9dffc; border-radius: 5px;")
         else:
-            message_item_widget.setStyleSheet("background-color: #ffffff; border-radius: 5px;")
+            message_item_widget.setStyleSheet("background-color: #838ec7; border-radius: 5px;")
 
         self.listWidget.addItem(list_item)
         self.listWidget.setItemWidget(list_item, message_item_widget)

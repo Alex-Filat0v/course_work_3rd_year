@@ -27,7 +27,7 @@ class RegistrationWindow(QtWidgets.QMainWindow):
         repeat_password = self.lineEdit_repeat_password.text()
 
         if not all([surname, first_name, email, phone_number, login, password]):
-            self.label_error.setText("*Обязательно заполните все поля (кроме отчества).")
+            self.label_error.setText("*Обязательно заполните все поля")
             return
 
         if password != repeat_password:
@@ -55,14 +55,12 @@ class RegistrationWindow(QtWidgets.QMainWindow):
             )
 
             if response.status_code == 200:
-                self.label_error.setStyleSheet("color: green;")
                 self.label_error.setText("✅ Регистрация прошла успешно! Теперь вы можете войти.")
 
             else:
                 error_detail = response.json().get('detail', 'Неизвестная ошибка сервера.')
-                self.label_error.setStyleSheet("color: red;")
-                self.label_error.setText(f"*{error_detail}")
+                self.label_error.setText(f"*{error_detail[0].get("msg")}")
 
-        except requests.exceptions.RequestException as e:
+        except requests.exceptions.RequestException:
             self.label_error.setStyleSheet("color: red;")
             self.label_error.setText(f"*Ошибка подключения к серверу. Попробуйте позже.")

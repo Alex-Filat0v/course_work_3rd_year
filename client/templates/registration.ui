@@ -6,9 +6,112 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>845</height>
+    <width>636</width>
+    <height>668</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>636</width>
+    <height>668</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>636</width>
+    <height>668</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
   </property>
   <property name="font">
    <font>
@@ -19,16 +122,107 @@
    <string>SimpleChat</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(70, 0, 211);</string>
+   <string notr="true">background-color: rgb(170, 170, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>-10</y>
+      <x>20</x>
+      <y>20</y>
       <width>371</width>
-      <height>141</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -37,7 +231,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Регистрация</string>
@@ -46,8 +240,8 @@
    <widget class="QLabel" name="label_error">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>120</y>
+      <x>20</x>
+      <y>90</y>
       <width>531</width>
       <height>41</height>
      </rect>
@@ -58,7 +252,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
@@ -67,8 +261,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>190</y>
+      <x>30</x>
+      <y>160</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -79,7 +273,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Фамилия</string>
@@ -88,8 +282,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>230</y>
+      <x>30</x>
+      <y>200</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -100,7 +294,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Имя</string>
@@ -109,8 +303,8 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>270</y>
+      <x>30</x>
+      <y>240</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -121,7 +315,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Отчество</string>
@@ -130,8 +324,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>300</y>
+      <x>30</x>
+      <y>270</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -142,7 +336,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Электронная почта</string>
@@ -151,8 +345,8 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>350</y>
+      <x>30</x>
+      <y>320</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -163,7 +357,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Номер телефона</string>
@@ -172,8 +366,8 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>380</y>
+      <x>30</x>
+      <y>350</y>
       <width>181</width>
       <height>51</height>
      </rect>
@@ -184,7 +378,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Дата рождения</string>
@@ -193,8 +387,8 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>420</y>
+      <x>30</x>
+      <y>390</y>
       <width>91</width>
       <height>51</height>
      </rect>
@@ -205,7 +399,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Логин</string>
@@ -214,8 +408,8 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>460</y>
+      <x>30</x>
+      <y>430</y>
       <width>101</width>
       <height>51</height>
      </rect>
@@ -226,7 +420,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Пароль</string>
@@ -235,8 +429,8 @@
    <widget class="QLineEdit" name="lineEdit_email">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>310</y>
+      <x>260</x>
+      <y>280</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -256,8 +450,8 @@
    <widget class="QLineEdit" name="lineEdit_patronymic">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>271</y>
+      <x>260</x>
+      <y>241</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -274,8 +468,8 @@
    <widget class="QLineEdit" name="lineEdit_name">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>231</y>
+      <x>260</x>
+      <y>201</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -292,8 +486,8 @@
    <widget class="QLineEdit" name="lineEdit_surname">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>191</y>
+      <x>260</x>
+      <y>161</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -310,8 +504,8 @@
    <widget class="QLineEdit" name="lineEdit_number">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>350</y>
+      <x>260</x>
+      <y>320</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -337,8 +531,8 @@
    <widget class="QLineEdit" name="lineEdit_login">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>430</y>
+      <x>260</x>
+      <y>400</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -355,8 +549,8 @@
    <widget class="QLineEdit" name="lineEdit_password">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>470</y>
+      <x>260</x>
+      <y>440</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -376,8 +570,8 @@
    <widget class="QPushButton" name="pushButton_registration">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>610</y>
+      <x>430</x>
+      <y>580</y>
       <width>181</width>
       <height>61</height>
      </rect>
@@ -388,8 +582,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+     <string notr="true">background-color: rgb(197, 255, 254);
+</string>
     </property>
     <property name="text">
      <string>Зарегистрироваться</string>
@@ -398,8 +592,8 @@ background-color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>500</y>
+      <x>30</x>
+      <y>470</y>
       <width>221</width>
       <height>51</height>
      </rect>
@@ -410,7 +604,7 @@ background-color: rgb(0, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Подтвердите пароль</string>
@@ -419,8 +613,8 @@ background-color: rgb(0, 0, 0);</string>
    <widget class="QLineEdit" name="lineEdit_repeat_password">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>510</y>
+      <x>260</x>
+      <y>480</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -440,8 +634,8 @@ background-color: rgb(0, 0, 0);</string>
    <widget class="QDateEdit" name="dateEdit">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>390</y>
+      <x>260</x>
+      <y>360</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -458,8 +652,8 @@ background-color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="pushButton_back">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>610</y>
+      <x>20</x>
+      <y>580</y>
       <width>181</width>
       <height>61</height>
      </rect>
@@ -470,25 +664,14 @@ background-color: rgb(0, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+     <string notr="true">background-color: rgb(197, 255, 254);
+</string>
     </property>
     <property name="text">
      <string>Назад к странице входа</string>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

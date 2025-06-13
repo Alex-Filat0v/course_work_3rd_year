@@ -7,13 +7,8 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>820</height>
+    <height>650</height>
    </rect>
-  </property>
-  <property name="font">
-   <font>
-    <pointsize>8</pointsize>
-   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -28,7 +23,7 @@
       <x>50</x>
       <y>20</y>
       <width>511</width>
-      <height>101</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -47,7 +42,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>180</y>
+      <y>130</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -68,21 +63,63 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>230</y>
+      <y>180</y>
       <width>351</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); border-radius: 5px;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QPushButton" name="pushButton_add_group">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>320</y>
-      <width>111</width>
+      <y>550</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 255, 250); color: black; border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>Создать группу</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_error">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>371</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 85, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>240</y>
+      <width>231</width>
       <height>41</height>
      </rect>
     </property>
@@ -95,62 +132,20 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Описание:</string>
+     <string>Выберите участников:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_description">
+   <widget class="QListWidget" name="listWidget_contacts">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>370</y>
+      <y>290</y>
       <width>351</width>
-      <height>231</height>
+      <height>241</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_add_group">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>620</y>
-      <width>151</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(85, 255, 250);</string>
-    </property>
-    <property name="text">
-     <string>Добавить группу</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_error">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>140</y>
-      <width>371</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>*Обязательно заполните все поля</string>
+     <string notr="true">background-color: rgb(255, 255, 255); border-radius: 5px;</string>
     </property>
    </widget>
   </widget>

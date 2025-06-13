@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SimpleChat</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(70, 0, 211);</string>
@@ -247,7 +247,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhEmailCharactersOnly</set>
@@ -268,7 +268,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_name">
@@ -286,7 +286,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_surname">
@@ -304,7 +304,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_number">
@@ -322,7 +322,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhDialableCharactersOnly</set>
@@ -349,7 +349,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_password">
@@ -367,7 +367,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -431,7 +431,7 @@ background-color: rgb(0, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -452,7 +452,7 @@ background-color: rgb(0, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_back">

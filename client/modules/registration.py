@@ -1,88 +1,68 @@
 import os
 import sys
-import json
-import urllib.request
+import requests
 from hashlib import sha256
-from datetime import datetime
-from PyQt6 import QtWidgets, uic
+from PyQt6 import QtWidgets, uic, QtCore
 
 
 class RegistrationWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-
         current_dir = os.path.dirname(__file__)
         file_dir = os.path.join(current_dir, "../templates/registration.ui")
         uic.loadUi(file_dir, self)
 
         self.pushButton_registration.clicked.connect(self.try_registration)
+        self.dateEdit.setDate(QtCore.QDate.currentDate())
 
     def try_registration(self):
-        surname = self.lineEdit_surname.text()
-        first_name = self.lineEdit_name.text()
-        patronymic = self.lineEdit_patronymic.text()
-        email = self.lineEdit_email.text()
-        phone_number = self.lineEdit_number.text()
-        date_of_birth = self.dateEdit.text()
-        login = self.lineEdit_login.text()
+        surname = self.lineEdit_surname.text().strip()
+        first_name = self.lineEdit_name.text().strip()
+        patronymic = self.lineEdit_patronymic.text().strip()
+        email = self.lineEdit_email.text().strip()
+        phone_number = self.lineEdit_number.text().strip()
+        date_of_birth_str = self.dateEdit.date().toString("yyyy-MM-dd")
+        login = self.lineEdit_login.text().strip()
         password = self.lineEdit_password.text()
         repeat_password = self.lineEdit_repeat_password.text()
 
-        if password != repeat_password:
-            self.label_error.setText("*Введенне вами пароли не совпадают")
+        if not all([surname, first_name, email, phone_number, login, password]):
+            self.label_error.setText("*Обязательно заполните все поля (кроме отчества).")
             return
 
-        try:
-            date_of_birth = datetime.strptime(f"{date_of_birth}", "%Y-%m-%d").date()
-            print(date_of_birth)
-        except:
-            date_of_birth = "2003-04-16"
+        if password != repeat_password:
+            self.label_error.setText("*Введенные вами пароли не совпадают")
+            return
 
-        password = sha256(password.encode('utf-8')).hexdigest()
+        hashed_password = sha256(password.encode('utf-8')).hexdigest()
 
-        auth = {
+        registration_data = {
             "surname": surname,
             "first_name": first_name,
             "patronymic": patronymic,
             "mail": email,
-            "phone_number": "+79528125252",
-            "birth_date": date_of_birth,
+            "phone_number": phone_number,
+            "birth_date": date_of_birth_str,
             "username": login,
-            "password": password
+            "password": hashed_password
         }
 
-        if not all(auth.values()):
-            self.label_error.setText("*Обязательно заполните все поля для входа")
-            return
-
-        data = json.dumps(auth).encode('utf-8')
-
         try:
-
-            req = urllib.request.Request(
+            response = requests.post(
                 "http://127.0.0.1:8000/registrations",
-                data=data,
-                headers={'Content-Type': 'application/json'}
+                json=registration_data,
+                timeout=10
             )
-            opener = urllib.request.build_opener()
 
-            with opener.open(req, timeout=10) as response:
-                status_code = response.getcode()
+            if response.status_code == 200:
+                self.label_error.setStyleSheet("color: green;")
+                self.label_error.setText("✅ Регистрация прошла успешно! Теперь вы можете войти.")
 
-            if status_code == 200:
-                self.label_error.setText("✅ Регистрация прошла успешно!")
+            else:
+                error_detail = response.json().get('detail', 'Неизвестная ошибка сервера.')
+                self.label_error.setStyleSheet("color: red;")
+                self.label_error.setText(f"*{error_detail}")
 
-        except Exception:
-            self.label_error.setText(f"*Это имя пользователя уже занято!")
-
-
-
-if __name__ == "__main__":
-
-    import asyncio
-
-
-    app = QtWidgets.QApplication(sys.argv)
-    window = RegistrationWindow()
-    window.show()
-    sys.exit(app.exec())
+        except requests.exceptions.RequestException as e:
+            self.label_error.setStyleSheet("color: red;")
+            self.label_error.setText(f"*Ошибка подключения к серверу. Попробуйте позже.")

@@ -1,11 +1,10 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, EmailStr
 from pydantic_extra_types.phone_numbers import PhoneNumber
-from datetime import date, datetime
-from db.db_module import DataBaseConnector
+from datetime import date
+from server.database.db_module import db_connector
 
 auth_router = APIRouter()
-database = DataBaseConnector()
 
 
 class AuthRequest(BaseModel):
@@ -26,49 +25,21 @@ class RegistrationRequest(BaseModel):
 
 @auth_router.post("/auth")
 async def login(auth: AuthRequest) -> dict:
-    try:
-        await database.connect()
-        user_data = {
-            'username': auth.username,
-            'password': auth.password
-        }
-
-
-        user = await database.user_authorization(user_data)
-
-        if not user:
-            raise HTTPException(status_code=401, detail="Ошибка авторизации")
-        return {"message": "Авторизация пользователя", "username": user_data["username"]}
-
-    except:
-        await database.disconnect()
+    user_authorized = await db_connector.user_authorization(auth.dict())
+    if not user_authorized:
+        raise HTTPException(status_code=401, detail="Ошибка авторизации: неверный логин или пароль")
+    return {"message": "Авторизация пользователя", "username": auth.username}
 
 
 @auth_router.post("/registrations")
 async def registration(auth: RegistrationRequest) -> dict:
-    try:
-        await database.connect()
+    user_data = auth.dict()
 
-        birth_date = datetime.strptime(f"{auth.birth_date}", "%Y-%m-%d").date()
+    user_data['phone_number'] = str(user_data['phone_number'])
 
-        user_data = {
-            'surname': auth.surname,
-            'first_name': auth.first_name,
-            'patronymic': auth.patronymic,
-            'mail': auth.mail,
-            'phone_number': auth.phone_number,
-            'birth_date': birth_date,
-            'username': auth.username,
-            'password': auth.password
-        }
+    answer_from_db = await db_connector.user_registration(user_data)
 
-
-        answer_from_db = await database.user_registration(user_data)
-
-        if answer_from_db is True:
-            return {"error": False, "message": "Пользователь успешно зарегистрирован"}
-        else:
-            raise HTTPException(status_code=401, detail=f"{answer_from_db}")
-
-    except:
-        await database.disconnect()
+    if answer_from_db is True:
+        return {"error": False, "message": "Пользователь успешно зарегистрирован"}
+    else:
+        raise HTTPException(status_code=400, detail=f"Ошибка регистрации: {answer_from_db}")

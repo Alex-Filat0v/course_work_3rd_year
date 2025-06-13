@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SimpleChat</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(170, 170, 255);</string>
@@ -87,7 +87,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255); color: black;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_password">

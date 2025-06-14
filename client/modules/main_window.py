@@ -8,7 +8,7 @@ from datetime import datetime
 from PyQt6 import uic, QtWidgets, QtCore
 
 from .message_widget import MessageWidget
-from .create_group_window import CreateGroupWindow
+from .create_group import CreateGroupWindow
 from .search_result_widget import SearchResultWidget
 
 

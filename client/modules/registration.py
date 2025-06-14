@@ -33,6 +33,12 @@ class RegistrationWindow(QtWidgets.QMainWindow):
         if password != repeat_password:
             self.label_error.setText("*Введенные вами пароли не совпадают")
             return
+        elif len(password) < 5:
+            self.label_error.setText("*Введенный вами пароль слишком простой")
+            return
+        elif len(login) < 4:
+            self.label_error.setText("*Введенный вами логин слишком короткий")
+            return
 
         hashed_password = sha256(password.encode('utf-8')).hexdigest()
 
